@@ -52,8 +52,23 @@ class _HomePageState extends State<HomePage> {
                   RichText(
                       text: TextSpan(
                           text: monan[i].name,
-                          style: TextStyle(
-                              fontSize: 14, fontStyle: FontStyle.italic)))
+                          style: const TextStyle(
+                              fontSize: 14, fontStyle: FontStyle.italic))),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      RichText(
+                          text: TextSpan(
+                              text: 'Nguồn gốc: ${monan[i].origin}',
+                              style: const TextStyle(
+                                  fontSize: 14, fontStyle: FontStyle.italic))),
+                      RichText(
+                          text: TextSpan(
+                              text: 'So luong: ${monan[i].count}',
+                              style: const TextStyle(
+                                  fontSize: 14, fontStyle: FontStyle.italic)))
+                    ],
+                  )
                 ],
               ),
             );
